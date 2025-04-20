@@ -1,3 +1,5 @@
+//Cola de Atención de Clientes en Supermercado con Map
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -55,7 +57,7 @@ function verCola() {
         console.log('\nLa cola está vacía.');
     } else {
         console.log('\nClientes en la cola:');
-        colaClientes.forEach((cliente, index) => {
+        colaClientes.map((cliente, index) => {
             console.log(`${index + 1}. ${cliente}`);
         });
     }

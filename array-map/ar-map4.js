@@ -1,3 +1,5 @@
+//Máquina Expendedora de Dulces y Gaseosas con Map
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -28,7 +30,8 @@ function mostrarMenu() {
 
 function mostrarInventario() {
     console.log('\nInventario de productos:');
-    productos.forEach((producto, index) => {
+    // Reemplazamos forEach por map
+    productos.map((producto, index) => {
         console.log(`${index + 1}. ${producto}: ${cantidades[index]} unidades`);
     });
     mostrarMenu();
